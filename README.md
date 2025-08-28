@@ -63,7 +63,7 @@ The best case input value of key for linear_search would be if the key was the f
 
 - [ ] 9. The theoretical worst-case running time of linear search is $O(n)$ and binary search is $O(log_2(n))$. Do these theoretical running times match your empirical results? Why or why not?
 
-The increase in linear time is more than expected, and the significant figures are too low to see the effects for binary, but I would say these empirical results support the theory.
+When n multiplies by 10, the expected increase in time is 10 times. However, the data shows a smaller increase. We tried adding higher exponentials to the list of sizes, but it crashed Davis's laptop. The error is likely generated in the time function. However, the binary is, as expected, much faster than the linear search when the list is already sorted.
 
 - [ ] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times. 
 
