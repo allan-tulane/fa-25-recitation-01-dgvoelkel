@@ -1,7 +1,7 @@
 # CMPS 2200  Recitation 01
 
-**Name (Team Member 1):**_________________________  
-**Name (Team Member 2):**_________________________
+**Name (Team Member 1):** Davis Voelkel
+**Name (Team Member 2):** Isaiah Kushner
 
 In this recitation, we will investigate asymptotic complexity. Additionally, we will get familiar with the various technologies we'll use for collaborative coding.
 
@@ -39,11 +39,11 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
 
 - [ ] 4. Describe the worst case input value of `key` for `linear_search`? for `binary_search`? 
 
-**TODO: your answer goes here**
+The worst case input value of key for linear_search and binary_search would be a key that is not in the list.
 
 - [ ] 5. Describe the best case input value of `key` for `linear_search`? for `binary_search`? 
 
-**TODO: your answer goes here**
+The best case input value of key for linear_search would be if the key was the first element of the inputted list. The best case input value of key for binary_search would be if the key was the middle element of the inputted list.
 
 - [ ] 6. Complete the `time_search` function to compute the running time of a search function. Note that this is an example of a "higher order" function, since one of its parameters is another function.
 
@@ -51,13 +51,30 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
 
 - [ ] 8. Call `print_results(compare_search())` and paste the results here:
 
-**TODO: add your timing results here**
+|        n |   linear |   binary |
+|----------|----------|----------|
+|       10 |    0.000 |    0.000 |
+|      100 |    0.000 |    0.000 |
+|     1000 |    0.000 |    0.000 |
+|    10000 |    0.000 |    0.000 |
+|   100000 |   11.809 |    0.000 |
+|  1000000 |   89.233 |    0.000 |
+| 10000000 |  547.728 |    0.000 |
 
 - [ ] 9. The theoretical worst-case running time of linear search is $O(n)$ and binary search is $O(log_2(n))$. Do these theoretical running times match your empirical results? Why or why not?
 
-**TODO: your answer goes here**
+The increase in linear time is more than expected, and the significant figures are too low to see the effects for binary, but I would say these empirical results support the theory.
 
 - [ ] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times. 
-  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: your answer goes here**
-  + For binary search? **TODO: your answer goes here**
-  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? **TODO: your answer goes here**
+  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? \[
+\text{Worst-case time} = \Theta(k n).
+\]
+  + For binary search? \[
+\text{Worst-case time} = \Theta(n^2 + k \log n).
+\]
+  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? \[
+n^2 + k \log n < k n 
+\;\;\Longleftrightarrow\;\;
+k > \frac{n^2}{\,n - \log n\,}
+\;\approx\; \frac{n^2}{n} = n.
+\]
