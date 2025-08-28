@@ -66,15 +66,19 @@ The best case input value of key for linear_search would be if the key was the f
 The increase in linear time is more than expected, and the significant figures are too low to see the effects for binary, but I would say these empirical results support the theory.
 
 - [ ] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times. 
-  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? \[
-\text{Worst-case time} = \Theta(k n).
-\]
-  + For binary search? \[
-\text{Worst-case time} = \Theta(n^2 + k \log n).
-\]
-  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? \[
-n^2 + k \log n < k n 
-\;\;\Longleftrightarrow\;\;
-k > \frac{n^2}{\,n - \log n\,}
-\;\approx\; \frac{n^2}{n} = n.
-\]
+
+  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search?
+
+    $\Theta(k n)$
+
+  + For binary search?
+
+    $\Theta(n^2 + k \log n)$
+
+  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting?
+
+   $$n^2 + k \log n < k n \Longleftrightarrow k > \frac{n^2}{n - \log n} \approx\frac{n^2}{n} = n.$$
+
+  Therefore,
+
+  $$k = \Omega(n).$$
