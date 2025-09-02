@@ -81,4 +81,4 @@ When n multiplies by 10, the expected increase in time is 10 times. However, the
 
   Therefore,
 
-  $$k = \Omega(n).$$
+  $$k = \Omega(n).$$ 
